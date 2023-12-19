@@ -1,59 +1,14 @@
-/* Home Component Styles */
-.home-container {
-    font-family: 'Arial', sans-serif;
-    margin: 0 auto;
-    max-width: 800px;
-    padding: 20px;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.home-header {
-    background-color: #f4f4f4;
-    text-align: center;
-    padding: 20px;
-}
-
-.home-header h1 {
-    margin: 0;
-}
-
-.home-header p {
-    font-style: italic;
-}
-
-.projects-section {
-    margin-top: 20px;
-}
-
-.projects-list {
-    list-style: none;
-    padding: 0;
-}
-
-/* Project Component Styles */
-.project-item {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    padding: 15px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.project-item h3 {
-    margin-top: 0;
-}
-
-.project-item p {
-    color: #666;
-}
-
-.project-link {
-    display: inline-block;
-    margin-top: 10px;
-    color: #007bff;
-    text-decoration: none;
-}
-
-.project-link:hover {
-    text-decoration: underline;
-}
+html {
+    /* Tailwind CSS equivalent classes */
+    @apply bg-no-repeat bg-cover bg-center bg-fixed;
+    background-image: url('./assets/bg-image.jpg');
+    background-blend-mode: hard-light;
+    /* Fallback color in case the image fails to load */
+    background-color: #b3b3b3; /* This is an example color, choose what fits your design */
+    scroll-behavior: smooth;
+  }
+  

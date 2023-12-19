@@ -1,9 +1,9 @@
-import Home from "./Home"
-import Project, {ProjectInterface} from "./Project"     
-
+import Home from "./Home/Home"
+import Project, {ProjectInterface} from "./Home/Project"     
+import Layout from "./Layout/Layout"
 export type {
     ProjectInterface
 }
 export {
-    Home, Project
+    Home, Project,Layout
 }
