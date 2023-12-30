@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './Card.css';
 
-interface CardProps {
+export interface CardProps {
     question: string;
     answer: string;
 }
@@ -14,14 +14,12 @@ const Card = ({ question, answer }: CardProps) => {
     };
 
     return (
-        <div className="flashcard" onClick={handleClick}>
-            <div className={`card ${isFlipped ? 'flipped' : ''}`}>
-                <div className="front">
-                    {question}
-                </div>
-                <div className="back">
-                    {answer}
-                </div>
+        <div className={`card ${isFlipped ? 'flipped' : ''}`} onClick={handleClick}>
+            <div className="front">
+                {question}
+            </div>
+            <div className="back">
+                {answer}
             </div>
         </div>
     );

@@ -1,15 +1,14 @@
 .flashcards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    justify-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+}
+
+/* Responsive adjustments (optional) */
+@media (max-width: 600px) {
+  .flashcards-grid {
+    grid-template-columns: 1fr;
   }
-  
-  /* Responsive adjustments (optional) */
-  @media (max-width: 600px) {
-    .flashcards-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-  
+}
