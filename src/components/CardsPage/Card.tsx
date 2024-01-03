@@ -1,12 +1,13 @@
-import { MouseEventHandler, useEffect, useReducer, useState } from 'react';
+import { MouseEventHandler, useReducer, useState } from 'react';
 import './Card.css';
 import { completeEdit, deleteIcon, editPen, turnCardIn, turnCardOut } from '../../assets';
 import axios, { AxiosError, AxiosResponse } from 'axios';
 
 export interface CardProps {
     id: number,
-    question: string;
-    answer: string;
+    question: string,
+    answer: string,
+    status: string
 }
 
 enum CardActionTypes {
@@ -96,6 +97,7 @@ const Card = ({ card, deleteCard }: { card: CardProps, deleteCard: () => void })
                 >
                     {editableContent.answer}
                 </div>
+                <div>Status:{card.status}</div>
                 <div className="card-actions">
                     <button className="turn-button" onClick={handleCardClick}>
                         <img src={turnCardOut} style={{ height: "30px" }} />
@@ -110,7 +112,6 @@ const Card = ({ card, deleteCard }: { card: CardProps, deleteCard: () => void })
                         <img src={deleteIcon} style={{ height: "30px" }} />
                     </button>
                 </div>
-
             </div>
         </div>
     )

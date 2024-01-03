@@ -19,244 +19,620 @@
   ],
   "flashcards": [
     {
+      "id": 1,
+      "question": "What is the capital of Japan?",
+      "answer": "Tokyo",
+      "status": "Learned",
+      "created": "2023-12-10T10:15:00Z",
+      "updated": "2024-01-02T14:30:00Z"
+    },
+    {
+      "id": 2,
+      "question": "Who wrote the play 'Hamlet'?",
+      "answer": "William Shakespeare",
+      "status": "Want to Learn",
+      "created": "2023-11-15T08:45:00Z",
+      "updated": "2024-01-03T12:20:00Z"
+    },
+    {
       "id": 3,
-      "question": "Who wrote the play 'Romeo and Juliet'?",
-      "answer": "William Shakespeare"
+      "question": "What is the chemical symbol for oxygen?",
+      "answer": "O",
+      "status": "Noted",
+      "created": "2023-10-20T14:55:00Z",
+      "updated": "2024-01-04T09:10:00Z"
     },
     {
       "id": 4,
-      "question": "What is the largest planet in our solar system?",
-      "answer": "Jupiter"
+      "question": "How many continents are there on Earth?",
+      "answer": "7",
+      "status": "Learned",
+      "created": "2023-09-25T11:30:00Z",
+      "updated": "2024-01-01T15:40:00Z"
     },
     {
       "id": 5,
-      "question": "What is the powerhouse of the cell?",
-      "answer": "Mitochondria"
+      "question": "Who painted the Mona Lisa?",
+      "answer": "Leonardo da Vinci",
+      "status": "Want to Learn",
+      "created": "2023-08-30T09:05:00Z",
+      "updated": "2024-01-02T16:50:00Z"
     },
     {
       "id": 6,
-      "question": "What is the capital of Japan?",
-      "answer": "Tokyo"
+      "question": "What is the largest planet in our solar system?",
+      "answer": "Jupiter",
+      "status": "Noted",
+      "created": "2023-07-05T17:20:00Z",
+      "updated": "2024-01-03T14:15:00Z"
     },
     {
       "id": 7,
-      "question": "What is the chemical symbol for oxygen?",
-      "answer": "O2"
+      "question": "What is the freezing point of water in Celsius?",
+      "answer": "0°C",
+      "status": "Learned",
+      "created": "2023-06-10T13:25:00Z",
+      "updated": "2024-01-04T10:25:00Z"
     },
     {
       "id": 8,
-      "question": "Who painted the Mona Lisa?",
-      "answer": "Leonardo da Vinci"
+      "question": "Who is the author of 'To Kill a Mockingbird'?",
+      "answer": "Harper Lee",
+      "status": "Want to Learn",
+      "created": "2023-05-15T16:50:00Z",
+      "updated": "2024-01-01T11:55:00Z"
     },
     {
       "id": 9,
-      "question": "What is the smallest planet in our solar system?",
-      "answer": "Mercury"
+      "question": "What is the largest mammal in the world?",
+      "answer": "Blue whale",
+      "status": "Noted",
+      "created": "2023-04-20T12:15:00Z",
+      "updated": "2024-01-02T14:40:00Z"
     },
     {
       "id": 10,
-      "question": "What gas do plants absorb from the atmosphere?",
-      "answer": "Carbon dioxide"
+      "question": "Who was the first woman to fly solo across the Atlantic Ocean?",
+      "answer": "Amelia Earhart",
+      "status": "Learned",
+      "created": "2023-03-25T10:30:00Z",
+      "updated": "2024-01-03T16:05:00Z"
     },
     {
       "id": 11,
-      "question": "What is the capital of Spain?",
-      "answer": "Madrid"
+      "question": "What is the currency of Brazil?",
+      "answer": "Brazilian Real",
+      "status": "Want to Learn",
+      "created": "2023-02-20T09:55:00Z",
+      "updated": "2024-01-04T08:55:00Z"
     },
     {
       "id": 12,
-      "question": "What is the chemical symbol for gold?",
-      "answer": "Au"
+      "question": "Who wrote the novel '1984'?",
+      "answer": "George Orwell",
+      "status": "Noted",
+      "created": "2023-01-15T15:40:00Z",
+      "updated": "2024-01-02T13:30:00Z"
     },
     {
       "id": 13,
-      "question": "Who wrote '1984'?",
-      "answer": "George Orwell"
+      "question": "What gas do plants absorb from the atmosphere?",
+      "answer": "Carbon dioxide (CO2)",
+      "status": "Learned",
+      "created": "2022-12-10T12:25:00Z",
+      "updated": "2024-01-03T11:45:00Z"
     },
     {
       "id": 14,
-      "question": "What is the closest star to Earth?",
-      "answer": "The Sun"
+      "question": "In which year did Christopher Columbus first reach the Americas?",
+      "answer": "1492",
+      "status": "Want to Learn",
+      "created": "2022-11-05T11:10:00Z",
+      "updated": "2024-01-01T09:35:00Z"
     },
     {
       "id": 15,
-      "question": "What is the capital of India?",
-      "answer": "New Delhi"
+      "question": "What is the smallest prime number?",
+      "answer": "2",
+      "status": "Noted",
+      "created": "2022-10-01T10:45:00Z",
+      "updated": "2024-01-02T08:20:00Z"
     },
     {
       "id": 16,
-      "question": "What is the chemical symbol for carbon?",
-      "answer": "C"
+      "question": "What is the world's largest desert by area?",
+      "answer": "Antarctica",
+      "status": "Learned",
+      "created": "2022-09-05T14:30:00Z",
+      "updated": "2024-01-03T15:10:00Z"
     },
     {
       "id": 17,
-      "question": "Who painted The Starry Night?",
-      "answer": "Vincent van Gogh"
+      "question": "What is the tallest mountain on Earth?",
+      "answer": "Mount Everest",
+      "status": "Want to Learn",
+      "created": "2022-08-10T13:15:00Z",
+      "updated": "2024-01-04T10:50:00Z"
     },
     {
       "id": 18,
-      "question": "What is the largest mammal in the world?",
-      "answer": "Blue whale"
+      "question": "What is the chemical symbol for sodium?",
+      "answer": "Na",
+      "status": "Noted",
+      "created": "2022-07-15T12:00:00Z",
+      "updated": "2024-01-01T12:45:00Z"
     },
     {
       "id": 19,
-      "question": "What is the capital of Brazil?",
-      "answer": "Brasília"
+      "question": "Who wrote 'The Catcher in the Rye'?",
+      "answer": "J.D. Salinger",
+      "status": "Learned",
+      "created": "2022-06-20T09:35:00Z",
+      "updated": "2024-01-02T16:30:00Z"
     },
     {
       "id": 20,
-      "question": "What is the chemical symbol for iron?",
-      "answer": "Fe"
+      "question": "What gas do humans breathe out when they exhale?",
+      "answer": "Carbon dioxide (CO2)",
+      "status": "Want to Learn",
+      "created": "2022-05-25T08:20:00Z",
+      "updated": "2024-01-03T14:15:00Z"
     },
     {
       "id": 21,
-      "question": "Who wrote 'Pride and Prejudice'?",
-      "answer": "Jane Austen"
+      "question": "What is the largest planet in the solar system?",
+      "answer": "Jupiter",
+      "status": "Noted",
+      "created": "2022-04-30T10:05:00Z",
+      "updated": "2024-01-04T13:25:00Z"
     },
     {
       "id": 22,
-      "question": "What is the largest ocean on Earth?",
-      "answer": "Pacific Ocean"
+      "question": "Who is the author of 'Pride and Prejudice'?",
+      "answer": "Jane Austen",
+      "status": "Learned",
+      "created": "2022-04-05T14:50:00Z",
+      "updated": "2024-01-02T11:40:00Z"
     },
     {
       "id": 23,
-      "question": "What is the capital of China?",
-      "answer": "Beijing"
+      "question": "What is the chemical symbol for iron?",
+      "answer": "Fe",
+      "status": "Want to Learn",
+      "created": "2022-03-10T09:25:00Z",
+      "updated": "2024-01-03T12:55:00Z"
     },
     {
       "id": 24,
-      "question": "What is the chemical symbol for silver?",
-      "answer": "Ag"
+      "question": "What is the largest ocean on Earth?",
+      "answer": "Pacific Ocean",
+      "status": "Noted",
+      "created": "2022-02-15T12:10:00Z",
+      "updated": "2024-01-01T10:20:00Z"
     },
     {
       "id": 25,
-      "question": "Who discovered penicillin?",
-      "answer": "Alexander Fleming"
+      "question": "Who is known as the 'Father of Modern Physics'?",
+      "answer": "Albert Einstein",
+      "status": "Learned",
+      "created": "2022-01-20T11:45:00Z",
+      "updated": "2024-01-02T09:35:00Z"
     },
     {
       "id": 26,
-      "question": "What is the largest continent?",
-      "answer": "Asia"
+      "question": "What is the chemical symbol for hydrogen?",
+      "answer": "H",
+      "status": "Want to Learn",
+      "created": "2021-12-25T10:30:00Z",
+      "updated": "2024-01-03T15:50:00Z"
     },
     {
       "id": 27,
-      "question": "What is the capital of Australia?",
-      "answer": "Canberra"
+      "question": "Who painted the 'Starry Night'?",
+      "answer": "Vincent van Gogh",
+      "status": "Noted",
+      "created": "2021-11-30T09:15:00Z",
+      "updated": "2024-01-04T11:05:00Z"
     },
     {
       "id": 28,
-      "question": "What is the chemical symbol for sodium?",
-      "answer": "Na"
+      "question": "What is the chemical symbol for carbon?",
+      "answer": "C",
+      "status": "Learned",
+      "created": "2021-11-05T13:00:00Z",
+      "updated": "2024-01-01T08:40:00Z"
     },
     {
       "id": 29,
-      "question": "Who wrote 'To Kill a Mockingbird'?",
-      "answer": "Harper Lee"
+      "question": "What is the largest bird in the world?",
+      "answer": "Ostrich",
+      "status": "Want to Learn",
+      "created": "2021-10-10T11:55:00Z",
+      "updated": "2024-01-02T10:25:00Z"
     },
     {
       "id": 30,
-      "question": "What is the smallest country in the world?",
-      "answer": "Vatican City"
+      "question": "What is the freezing point of water in Fahrenheit?",
+      "answer": "32°F",
+      "status": "Noted",
+      "created": "2021-09-15T10:40:00Z",
+      "updated": "2024-01-03T14:10:00Z"
     },
     {
       "id": 31,
-      "question": "What is the capital of Russia?",
-      "answer": "Moscow"
+      "question": "What is the chemical symbol for oxygen?",
+      "answer": "O",
+      "status": "Learned",
+      "created": "2021-08-20T09:35:00Z",
+      "updated": "2024-01-04T10:45:00Z"
     },
     {
       "id": 32,
-      "question": "What is the chemical symbol for nitrogen?",
-      "answer": "N"
+      "question": "What is the boiling point of water in Celsius?",
+      "answer": "100°C",
+      "status": "Want to Learn",
+      "created": "2021-07-25T08:20:00Z",
+      "updated": "2024-01-02T11:20:00Z"
     },
     {
       "id": 33,
-      "question": "Who composed 'Moonlight Sonata'?",
-      "answer": "Ludwig van Beethoven"
+      "question": "Who is the author of 'The Great Gatsby'?",
+      "answer": "F. Scott Fitzgerald",
+      "status": "Noted",
+      "created": "2021-06-30T07:05:00Z",
+      "updated": "2024-01-03T09:55:00Z"
     },
     {
       "id": 34,
-      "question": "What is the highest mountain on Earth?",
-      "answer": "Mount Everest"
+      "question": "What is the capital of Brazil?",
+      "answer": "Brasília",
+      "status": "Learned",
+      "created": "2021-06-05T10:50:00Z",
+      "updated": "2024-01-04T12:15:00Z"
     },
     {
       "id": 35,
-      "question": "What is the capital of South Africa?",
-      "answer": "Pretoria"
+      "question": "What is the chemical symbol for helium?",
+      "answer": "He",
+      "status": "Want to Learn",
+      "created": "2021-05-10T09:35:00Z",
+      "updated": "2024-01-01T10:30:00Z"
     },
     {
       "id": 36,
-      "question": "What is the chemical symbol for calcium?",
-      "answer": "Ca"
+      "question": "What is the largest moon of Saturn?",
+      "answer": "Titan",
+      "status": "Noted",
+      "created": "2021-04-15T08:20:00Z",
+      "updated": "2024-01-02T11:45:00Z"
     },
     {
       "id": 37,
-      "question": "Who is the author of 'The Great Gatsby'?",
-      "answer": "F. Scott Fitzgerald"
+      "question": "Who wrote 'The Odyssey'?",
+      "answer": "Homer",
+      "status": "Learned",
+      "created": "2021-03-20T07:05:00Z",
+      "updated": "2024-01-03T09:20:00Z"
     },
     {
       "id": 38,
-      "question": "What is the deepest part of the ocean?",
-      "answer": "Mariana Trench"
+      "question": "What is the chemical symbol for nitrogen?",
+      "answer": "N",
+      "status": "Want to Learn",
+      "created": "2021-02-25T10:50:00Z",
+      "updated": "2024-01-04T12:45:00Z"
     },
     {
       "id": 39,
-      "question": "What is the capital of Canada?",
-      "answer": "Ottawa"
+      "question": "What is the largest desert in Africa?",
+      "answer": "Sahara Desert",
+      "status": "Noted",
+      "created": "2021-02-01T09:35:00Z",
+      "updated": "2024-01-01T11:30:00Z"
     },
     {
       "id": 40,
-      "question": "What is the chemical symbol for potassium?",
-      "answer": "K"
+      "question": "Who wrote 'The Lord of the Rings'?",
+      "answer": "J.R.R. Tolkien",
+      "status": "Learned",
+      "created": "2021-01-06T08:20:00Z",
+      "updated": "2024-01-02T10:55:00Z"
     },
     {
       "id": 41,
-      "question": "Who painted 'The Persistence of Memory'?",
-      "answer": "Salvador Dali"
+      "question": "What is the chemical symbol for potassium?",
+      "answer": "K",
+      "status": "Want to Learn",
+      "created": "2020-12-10T11:25:00Z",
+      "updated": "2024-01-03T13:30:00Z"
     },
     {
       "id": 42,
-      "question": "What is the largest desert in the world?",
-      "answer": "Sahara Desert"
+      "question": "What is the largest planet in the Milky Way galaxy?",
+      "answer": "Jupiter",
+      "status": "Noted",
+      "created": "2020-11-15T12:40:00Z",
+      "updated": "2024-01-04T11:50:00Z"
     },
     {
       "id": 43,
-      "question": "What is the capital of Egypt?",
-      "answer": "Cairo"
+      "question": "Who is the author of 'The Hunger Games'?",
+      "answer": "Suzanne Collins",
+      "status": "Learned",
+      "created": "2020-10-20T10:55:00Z",
+      "updated": "2024-01-01T09:15:00Z"
     },
     {
       "id": 44,
-      "question": "What is the chemical symbol for copper?",
-      "answer": "Cu"
+      "question": "What is the largest fish in the ocean?",
+      "answer": "Whale shark",
+      "status": "Want to Learn",
+      "created": "2020-09-25T09:10:00Z",
+      "updated": "2024-01-02T10:45:00Z"
     },
     {
       "id": 45,
-      "question": "Who is the author of 'War and Peace'?",
-      "answer": "Leo Tolstoy"
+      "question": "What is the chemical symbol for lead?",
+      "answer": "Pb",
+      "status": "Noted",
+      "created": "2020-08-30T08:25:00Z",
+      "updated": "2024-01-03T13:10:00Z"
     },
     {
       "id": 46,
-      "question": "What is the largest lake in the world?",
-      "answer": "Caspian Sea"
+      "question": "What is the largest planet in the solar system?",
+      "answer": "Jupiter",
+      "status": "Learned",
+      "created": "2020-08-05T12:40:00Z",
+      "updated": "2024-01-04T10:20:00Z"
     },
     {
       "id": 47,
-      "question": "What is the capital of Mexico?",
-      "answer": "Mexico City"
+      "question": "What is the boiling point of water in Fahrenheit?",
+      "answer": "212°F",
+      "status": "Want to Learn",
+      "created": "2020-07-10T11:55:00Z",
+      "updated": "2024-01-01T08:35:00Z"
     },
     {
       "id": 48,
-      "question": "What is the chemical symbol for uranium?",
-      "answer": "U"
+      "question": "Who wrote 'Moby-Dick'?",
+      "answer": "Herman Melville",
+      "status": "Noted",
+      "created": "2020-06-15T11:10:00Z",
+      "updated": "2024-01-02T09:00:00Z"
     },
     {
       "id": 49,
-      "question": "Who is the author of 'The Catcher in the Rye'?",
-      "answer": "J.D. Salinger"
+      "question": "What is the chemical symbol for silver?",
+      "answer": "Ag",
+      "status": "Learned",
+      "created": "2020-05-20T10:25:00Z",
+      "updated": "2024-01-03T12:25:00Z"
     },
     {
       "id": 50,
-      "question": "What is the longest river in the world?",
-      "answer": "Nile River"
+      "question": "What is the largest rainforest in the world?",
+      "answer": "Amazon Rainforest",
+      "status": "Want to Learn",
+      "created": "2020-04-25T09:40:00Z",
+      "updated": "2024-01-04T09:50:00Z"
+    },
+    {
+      "id": 51,
+      "question": "What is the chemical symbol for copper?",
+      "answer": "Cu",
+      "status": "Noted",
+      "created": "2020-03-31T08:55:00Z",
+      "updated": "2024-01-01T11:15:00Z"
+    },
+    {
+      "id": 52,
+      "question": "Who is known as the 'Father of the Computer'?",
+      "answer": "Charles Babbage",
+      "status": "Learned",
+      "created": "2020-03-05T08:10:00Z",
+      "updated": "2024-01-02T08:30:00Z"
+    },
+    {
+      "id": 53,
+      "question": "What is the capital of India?",
+      "answer": "New Delhi",
+      "status": "Want to Learn",
+      "created": "2020-02-09T10:25:00Z",
+      "updated": "2024-01-03T11:55:00Z"
+    },
+    {
+      "id": 54,
+      "question": "What is the chemical symbol for tin?",
+      "answer": "Sn",
+      "status": "Noted",
+      "created": "2020-01-14T09:40:00Z",
+      "updated": "2024-01-04T11:20:00Z"
+    },
+    {
+      "id": 55,
+      "question": "Who was the first person to step on the Moon?",
+      "answer": "Neil Armstrong",
+      "status": "Learned",
+      "created": "2019-12-20T08:55:00Z",
+      "updated": "2024-01-01T10:45:00Z"
+    },
+    {
+      "id": 56,
+      "question": "What is the chemical symbol for uranium?",
+      "answer": "U",
+      "status": "Want to Learn",
+      "created": "2019-11-25T08:10:00Z",
+      "updated": "2024-01-02T09:10:00Z"
+    },
+    {
+      "id": 57,
+      "question": "Who painted the 'Mona Lisa'?",
+      "answer": "Leonardo da Vinci",
+      "status": "Noted",
+      "created": "2019-10-30T10:25:00Z",
+      "updated": "2024-01-03T11:35:00Z"
+    },
+    {
+      "id": 58,
+      "question": "What is the chemical symbol for gold?",
+      "answer": "Au",
+      "status": "Learned",
+      "created": "2019-10-05T09:40:00Z",
+      "updated": "2024-01-04T10:00:00Z"
+    },
+    {
+      "id": 59,
+      "question": "What is the world's largest desert by area?",
+      "answer": "Sahara Desert",
+      "status": "Want to Learn",
+      "created": "2019-09-10T08:55:00Z",
+      "updated": "2024-01-01T09:25:00Z"
+    },
+    {
+      "id": 60,
+      "question": "Who is the author of 'The Catcher in the Rye'?",
+      "answer": "J.D. Salinger",
+      "status": "Noted",
+      "created": "2019-08-15T08:10:00Z",
+      "updated": "2024-01-02T08:50:00Z"
+    },
+    {
+      "id": 61,
+      "question": "What gas do humans breathe out when they exhale?",
+      "answer": "Carbon dioxide (CO2)",
+      "status": "Learned",
+      "created": "2019-07-20T10:25:00Z",
+      "updated": "2024-01-03T11:15:00Z"
+    },
+    {
+      "id": 62,
+      "question": "What is the chemical symbol for sodium?",
+      "answer": "Na",
+      "status": "Want to Learn",
+      "created": "2019-06-25T09:40:00Z",
+      "updated": "2024-01-04T09:40:00Z"
+    },
+    {
+      "id": 63,
+      "question": "What is the largest mammal in the world?",
+      "answer": "Blue whale",
+      "status": "Noted",
+      "created": "2019-05-30T08:55:00Z",
+      "updated": "2024-01-01T09:05:00Z"
+    },
+    {
+      "id": 64,
+      "question": "Who was the first woman to fly solo across the Atlantic Ocean?",
+      "answer": "Amelia Earhart",
+      "status": "Learned",
+      "created": "2019-05-05T08:10:00Z",
+      "updated": "2024-01-02T08:20:00Z"
+    },
+    {
+      "id": 65,
+      "question": "What is the capital of France?",
+      "answer": "Paris",
+      "status": "Want to Learn",
+      "created": "2019-04-10T10:25:00Z",
+      "updated": "2024-01-03T10:45:00Z"
+    },
+    {
+      "id": 66,
+      "question": "Who wrote the play 'Romeo and Juliet'?",
+      "answer": "William Shakespeare",
+      "status": "Noted",
+      "created": "2019-03-15T09:40:00Z",
+      "updated": "2024-01-04T09:10:00Z"
+    },
+    {
+      "id": 67,
+      "question": "What is the chemical symbol for helium?",
+      "answer": "He",
+      "status": "Learned",
+      "created": "2019-02-20T08:55:00Z",
+      "updated": "2024-01-01T08:35:00Z"
+    },
+    {
+      "id": 68,
+      "question": "What is the largest moon of Saturn?",
+      "answer": "Titan",
+      "status": "Want to Learn",
+      "created": "2019-01-25T08:10:00Z",
+      "updated": "2024-01-02T08:55:00Z"
+    },
+    {
+      "id": 69,
+      "question": "What is the chemical symbol for carbon?",
+      "answer": "C",
+      "status": "Noted",
+      "created": "2018-12-31T10:25:00Z",
+      "updated": "2024-01-03T10:20:00Z"
+    },
+    {
+      "id": 70,
+      "question": "Who is known as the 'Father of Modern Physics'?",
+      "answer": "Albert Einstein",
+      "status": "Learned",
+      "created": "2018-12-05T09:40:00Z",
+      "updated": "2024-01-04T08:50:00Z"
+    },
+    {
+      "id": 71,
+      "question": "What is the capital of the United Kingdom?",
+      "answer": "London",
+      "status": "Want to Learn",
+      "created": "2018-11-10T08:55:00Z",
+      "updated": "2024-01-01T08:15:00Z"
+    },
+    {
+      "id": 72,
+      "question": "What is the chemical symbol for oxygen?",
+      "answer": "O",
+      "status": "Noted",
+      "created": "2018-10-15T08:10:00Z",
+      "updated": "2024-01-02T08:20:00Z"
+    },
+    {
+      "id": 73,
+      "question": "What is the freezing point of water in Celsius?",
+      "answer": "0°C",
+      "status": "Learned",
+      "created": "2018-09-20T10:25:00Z",
+      "updated": "2024-01-03T09:40:00Z"
+    },
+    {
+      "id": 74,
+      "question": "Who wrote 'The Great Gatsby'?",
+      "answer": "F. Scott Fitzgerald",
+      "status": "Want to Learn",
+      "created": "2018-08-25T09:40:00Z",
+      "updated": "2024-01-04T08:05:00Z"
+    },
+    {
+      "id": 75,
+      "question": "What is the chemical symbol for nitrogen?",
+      "answer": "N",
+      "status": "Noted",
+      "created": "2018-08-01T08:55:00Z",
+      "updated": "2024-01-01T07:30:00Z"
+    },
+    {
+      "id": 76,
+      "question": "What is the largest desert in Africa?",
+      "answer": "Sahara Desert",
+      "status": "Learned",
+      "created": "2018-07-06T08:10:00Z",
+      "updated": "2024-01-02T08:35:00Z"
+    },
+    {
+      "id": 77,
+      "question": "Who is the author of 'The Lord of the Rings'?",
+      "answer": "J.R.R. Tolkien",
+      "status": "Want to Learn",
+      "created": "2018-06-11T10:25:00Z",
+      "updated": "2024-01-03T08:50:00Z"
     }
   ]
 }
