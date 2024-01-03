@@ -8,14 +8,24 @@ import AddCardModal from './AddCardModal';
 function Container() {
   const { data, error, isLoading, page, hasMore, setPage, setData, setHasMore } = useFetch<CardProps>(import.meta.env.VITE_API_KEY + "/flashcards", 1, 10);
   const [dataForRender, setDataForRender] = useState(data)
-  const [lastItemRef, isLastItemInView] = useInView(1);
+  const [lastItemRef, isLastItemInView] = useInView(0.5);
   const [searchQuery, setSearchQuery] = useState("")
   const [filterOption, setFilterOption] = useState("")
   const [sortrOption, setSortrOption] = useState("")
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedCards, setSelectedCards] = useState<number[]>([]);
 
+  useEffect(() => { if (isLastItemInView && hasMore) setPage(page + 1); }, [isLastItemInView]);
+  const handleSelectCard = (cardId: number, isSelected: boolean) => {
+    setSelectedCards(prevSelected => {
+      if (isSelected) {
+        return [...prevSelected, cardId];
+      } else {
+        return prevSelected.filter(id => id !== cardId);
+      }
+    });
+  };
 
-  useEffect(() => { if (isLastItemInView) setPage(page + 1); }, [isLastItemInView]);
 
   const handleDeleteCard = (cardId: number) => {
     axios.delete(`${import.meta.env.VITE_API_KEY}/flashcards/${cardId}`)
@@ -69,10 +79,23 @@ function Container() {
       .then((res: AxiosResponse) => {
         console.log("Created")
         console.log(res.data.id)
-        if(page-1 <= res.data.id / 10) setPage((res.data.id / 10)+1)
+        if (page - 1 <= res.data.id / 10) setPage((res.data.id / 10) + 1)
         setHasMore(true)
       })
   }
+
+  const handleShare = () => {
+    const selectedCardsData = data.filter(card => selectedCards.includes(card.id));
+
+    const emailSubject = 'Sharing Selected Cards';
+    const emailBody = JSON.stringify(selectedCardsData, null, 2); // Use JSON.stringify with pretty-printing (2 spaces for indentation)
+    const encodedSubject = encodeURIComponent(emailSubject);
+    const encodedBody = encodeURIComponent(emailBody);
+    const mailtoLink = `mailto:?subject=${encodedSubject}&body=${encodedBody}`;
+    window.open(mailtoLink, '_blank');
+  }
+
+
 
   return (
     <div className='flashcards-grid'>
@@ -102,6 +125,9 @@ function Container() {
         <div className="action-button" onClick={() => setIsModalOpen(true)}>
           <button>Add Card</button>
         </div>
+        <div className="action-button" onClick={handleShare}>
+          <button>Share cards</button>
+        </div>
       </div>
       {
         isModalOpen &&
@@ -113,9 +139,16 @@ function Container() {
       }
       {dataForRender.map((c: CardProps, i: number) => {
         if (i + 1 === dataForRender.length) {
-          return <div className='lastitem-container' ref={lastItemRef} key={i}><Card deleteCard={() => { handleDeleteCard(c.id) }} card={c} key={i} /></div>
+          return <div className='lastitem-container' ref={lastItemRef} key={i}>
+            <Card deleteCard={() => { handleDeleteCard(c.id) }} card={c} key={i}
+              selectCard={(isSelected) => handleSelectCard(c.id, isSelected)}
+            />
+          </div>
         }
-        return <Card deleteCard={() => { handleDeleteCard(c.id) }} card={c} key={i} />;
+        return <Card deleteCard={() => { handleDeleteCard(c.id) }}
+          selectCard={(isSelected) => handleSelectCard(c.id, isSelected)}
+          card={c} key={i}
+        />;
       })}
 
       {error && <div>{error}</div>}

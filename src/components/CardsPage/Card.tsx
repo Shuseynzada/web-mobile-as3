@@ -40,10 +40,11 @@ const editContentReducer = (state: CardProps, action: CardAction) => {
 };
 
 
-const Card = ({ card, deleteCard }: { card: CardProps, deleteCard: () => void }) => {
+const Card = ({ card, deleteCard, selectCard }: { card: CardProps, deleteCard: () => void, selectCard: (a: boolean) => void }) => {
     const [isFlipped, setIsFlipped] = useState(false);
     const [isEdit, setIsEdit] = useState<boolean>(false);
     const [editableContent, dispatchContent] = useReducer(editContentReducer, card);
+    const [isSelected, setIsSelect] = useState<boolean>(false)
 
     const handleCardClick = () => {
         setIsFlipped(!isFlipped);
@@ -69,6 +70,12 @@ const Card = ({ card, deleteCard }: { card: CardProps, deleteCard: () => void })
             })
     }
 
+    const handleSelectCard = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setIsSelect(e.target.checked)
+        selectCard(e.target.checked);
+    };
+
+
     return (
         <div className={`card ${isFlipped ? 'flipped' : ''}`}>
             <div className="front">
@@ -91,10 +98,16 @@ const Card = ({ card, deleteCard }: { card: CardProps, deleteCard: () => void })
                             : <img src={editPen} alt="edit pen" />
                         }
                     </div>
+                    <div className="select-checkbox">
+                        <input
+                            type="checkbox"
+                            onChange={handleSelectCard}
+                            checked={isSelected}
+                        />
+                    </div>
                     <button className="delete-button" onClick={deleteCard}>
                         <img src={deleteIcon} style={{ height: "30px" }} />
                     </button>
-
                 </div>
             </div>
             <div className="back">
@@ -133,6 +146,13 @@ const Card = ({ card, deleteCard }: { card: CardProps, deleteCard: () => void })
                             ? <img src={completeEdit} alt="complete edit" />
                             : <img src={editPen} alt="edit pen" />
                         }
+                    </div>
+                    <div className="select-checkbox">
+                        <input
+                            type="checkbox"
+                            onChange={handleSelectCard}
+                            checked={isSelected}
+                        />
                     </div>
                     <button className="delete-button" onClick={deleteCard}>
                         <img src={deleteIcon} style={{ height: "30px" }} />

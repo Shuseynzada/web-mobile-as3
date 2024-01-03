@@ -1,8 +1,6 @@
-
-
 .card {
   padding: 2em 0;
-  height: 10em;
+  height: 12em;
   width: 100%;
   perspective: 1000px;
 }
@@ -69,6 +67,19 @@
   display: flex;
 }
 
-.card-status, .card-created, .card-updated {
+.card-status,
+.card-created,
+.card-updated {
   margin-bottom: 5px;
+}
+
+.card .select-checkbox {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.card .select-checkbox input[type="checkbox"] {
+  cursor: pointer;
+  scale: 2;
 }
