@@ -2,10 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
     /* Tailwind CSS equivalent classes */
     @apply bg-no-repeat bg-cover bg-center bg-fixed;
-    background-image: url('./assets/bg-image.jpg');
+    background-image: url('./assets/AnimatedShape.svg');
     background-blend-mode: hard-light;
     /* Fallback color in case the image fails to load */
     background-color: #b3b3b3; /* This is an example color, choose what fits your design */

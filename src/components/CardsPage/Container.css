@@ -1,9 +1,13 @@
 .flashcards-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 20px;
   padding: 20px;
   justify-items: center;
+}
+
+.lastitem-container{
+  width: 100%;
 }
 
 /* Responsive adjustments (optional) */

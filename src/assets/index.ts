@@ -1,6 +1,6 @@
-import bgImage from "./bg-image.jpg"
 import photoMe from "./photo_me.jpg"
-
+import editPen from "./EditPen.svg"
+import completeEdit from "./CompleteEdit.svg"
 export {
-    bgImage, photoMe
+    photoMe, editPen, completeEdit
 }
