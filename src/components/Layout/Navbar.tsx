@@ -20,6 +20,9 @@ const Navbar = () => {
                         <NavLink to="/cards" className={getNavLinkClass}>
                             Flash Cards
                         </NavLink>
+                        <NavLink to="/contact" className={getNavLinkClass}>
+                            Contact
+                        </NavLink>
                     </div>
                     {/* Additional elements here if needed, like a logo or a toggle button */}
                 </div>

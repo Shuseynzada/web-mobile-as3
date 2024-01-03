@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
-import { Container, Home, Layout } from './components'
+import { ContactPage, Container, Home, Layout } from './components'
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
           <Route path='cards' element={<Container />} />
+          <Route path='contact' element={<ContactPage />} />
         </Route>
       </Routes>
     </>
