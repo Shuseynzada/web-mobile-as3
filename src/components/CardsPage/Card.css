@@ -56,3 +56,8 @@
 .edit-button img {
   height: 1.2em;
 }
+
+.card-actions {
+  display: flex;
+  gap: 0.5em;
+}

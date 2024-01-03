@@ -16,5 +16,6 @@ html {
     /* Fallback color in case the image fails to load */
     background-color: #b3b3b3; /* This is an example color, choose what fits your design */
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
   

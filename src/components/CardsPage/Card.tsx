@@ -1,6 +1,7 @@
-import { MouseEventHandler, useReducer, useState } from 'react';
+import { MouseEventHandler, useEffect, useReducer, useState } from 'react';
 import './Card.css';
-import { completeEdit, editPen } from '../../assets';
+import { completeEdit, deleteIcon, editPen, turnCardIn, turnCardOut } from '../../assets';
+import axios, { AxiosError, AxiosResponse } from 'axios';
 
 export interface CardProps {
     id: number,
@@ -31,7 +32,7 @@ const editContentReducer = (state: CardProps, action: CardAction) => {
 };
 
 
-const Card = ({ card }: { card: CardProps }) => {
+const Card = ({ card, deleteCard }: { card: CardProps, deleteCard: () => void }) => {
     const [isFlipped, setIsFlipped] = useState(false);
     const [isEdit, setIsEdit] = useState<boolean>(false);
     const [editableContent, dispatchContent] = useReducer(editContentReducer, card);
@@ -39,42 +40,77 @@ const Card = ({ card }: { card: CardProps }) => {
     const handleCardClick = () => {
         setIsFlipped(!isFlipped);
     };
-
     const handleEditClick: MouseEventHandler<HTMLDivElement> = (e) => {
-        e.stopPropagation();
-        setIsEdit(!isEdit);
+        if (isEdit) {
+            handlePut()
+            setIsEdit(false);
+        } else {
+            setIsEdit(true)
+        }
     };
 
+    const handlePut = () => {
+        axios.put(import.meta.env.VITE_API_KEY + "/flashcards/" + card.id, editableContent)
+            .then((e: AxiosResponse) => {
+                console.log("Update Successful")
+            })
+            .catch((e: AxiosError) => {
+                console.log("Error: " + e.message)
+            })
+    }
 
     return (
-        <div className={`card ${isFlipped ? 'flipped' : ''}`} onClick={handleCardClick}>
+        <div className={`card ${isFlipped ? 'flipped' : ''}`}>
             <div className="front">
                 <div>{card.id}</div>
-                <div contentEditable={isEdit} className='tilting' onClick={e => e.stopPropagation()}>{editableContent.question}</div>
-                <div className="edit-button" onClick={handleEditClick}>
-                    {isEdit
-                        ? <img src={completeEdit} alt="complete edit" />
-                        : <img src={editPen} alt="edit pen" />
-                    }
+                <div className='editable-content'
+                    contentEditable={isEdit}
+                    onBlur={(e) => dispatchContent({ type: CardActionTypes.UPDATE_QUESTION, payload: e.currentTarget.textContent || "" })}
+                    suppressContentEditableWarning={true}
+                >
+                    {editableContent.question}
+                </div>
+
+                <div className="card-actions">
+                    <button className="turn-button" onClick={handleCardClick}>
+                        <img src={turnCardIn} style={{ height: "30px" }} />
+                    </button>
+                    <div className="edit-button" onClick={handleEditClick}>
+                        {isEdit
+                            ? <img src={completeEdit} alt="complete edit" />
+                            : <img src={editPen} alt="edit pen" />
+                        }
+                    </div>
+                    <button className="delete-button" onClick={deleteCard}>
+                        <img src={deleteIcon} style={{ height: "30px" }} />
+                    </button>
+
                 </div>
             </div>
             <div className="back">
                 <div>{card.id}</div>
-                <div
-                    contentEditable={true}
-                    onClick={e => e.stopPropagation()}
-                    onChange={(e: React.FormEvent<HTMLDivElement>) => dispatchContent({
-                        type: CardActionTypes.UPDATE_ANSWER,
-                        payload: e.currentTarget.textContent || ''
-                    })}
-                    dangerouslySetInnerHTML={{ __html: editableContent.answer }}
-                />
-                <div className="edit-button" onClick={handleEditClick} >
-                    {isEdit
-                        ? <img src={completeEdit} alt="complete edit" />
-                        : <img src={editPen} alt="edit pen" />
-                    }
+                <div className='editable-content'
+                    contentEditable={isEdit}
+                    onBlur={(e) => dispatchContent({ type: CardActionTypes.UPDATE_ANSWER, payload: e.currentTarget.textContent || "" })}
+                    suppressContentEditableWarning={true}
+                >
+                    {editableContent.answer}
                 </div>
+                <div className="card-actions">
+                    <button className="turn-button" onClick={handleCardClick}>
+                        <img src={turnCardOut} style={{ height: "30px" }} />
+                    </button>
+                    <div className="edit-button" onClick={handleEditClick}>
+                        {isEdit
+                            ? <img src={completeEdit} alt="complete edit" />
+                            : <img src={editPen} alt="edit pen" />
+                        }
+                    </div>
+                    <button className="delete-button" onClick={deleteCard}>
+                        <img src={deleteIcon} style={{ height: "30px" }} />
+                    </button>
+                </div>
+
             </div>
         </div>
     )
