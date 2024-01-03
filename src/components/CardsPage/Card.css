@@ -1,8 +1,8 @@
-/* Card.css */
+
 
 .card {
   padding: 2em 0;
-  height: 5em;
+  height: 10em;
   width: 100%;
   perspective: 1000px;
 }
@@ -60,4 +60,15 @@
 .card-actions {
   display: flex;
   gap: 0.5em;
+}
+
+.card-info {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #555;
+  display: flex;
+}
+
+.card-status, .card-created, .card-updated {
+  margin-bottom: 5px;
 }

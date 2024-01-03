@@ -38,7 +38,7 @@ const useFetch = <T>(url: string, initialPage: number = 1, limit: number = 5) =>
         if (hasMore) fetchData();
     }, [fetchData]);
 
-    return { data, error, isLoading, page, hasMore, setPage, setData };
+    return { data, error, isLoading, page, hasMore, setPage, setData, setHasMore };
 }
 
 export default useFetch;

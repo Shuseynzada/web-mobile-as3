@@ -2,15 +2,18 @@ import { useEffect, useState } from 'react';
 import Card, { CardProps } from './Card';
 import { useFetch, useInView } from '../../hooks';
 import "./Container.css";
-import axios, { AxiosError } from 'axios';
+import axios, { AxiosError, AxiosResponse } from 'axios';
+import AddCardModal from './AddCardModal';
 
 function Container() {
-  const { data, setData, setPage, page, isLoading, error, hasMore } = useFetch<CardProps>(import.meta.env.VITE_API_KEY + "/flashcards", 1, 10);
+  const { data, error, isLoading, page, hasMore, setPage, setData, setHasMore } = useFetch<CardProps>(import.meta.env.VITE_API_KEY + "/flashcards", 1, 10);
   const [dataForRender, setDataForRender] = useState(data)
   const [lastItemRef, isLastItemInView] = useInView(1);
   const [searchQuery, setSearchQuery] = useState("")
   const [filterOption, setFilterOption] = useState("")
   const [sortrOption, setSortrOption] = useState("")
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
 
   useEffect(() => { if (isLastItemInView) setPage(page + 1); }, [isLastItemInView]);
 
@@ -45,6 +48,10 @@ function Container() {
       filteredData.sort((a, b) => a.question.localeCompare(b.question));
     } else if (sortrOption === 'Answer') {
       filteredData.sort((a, b) => a.answer.localeCompare(b.answer));
+    } else if (sortrOption === "Create Date") {
+      filteredData.sort((a, b) => new Date(a.created).getTime() - new Date(b.created).getTime())
+    } else if (sortrOption === "Update Date") {
+      filteredData.sort((a, b) => new Date(a.updated).getTime() - new Date(b.updated).getTime())
     }
 
     // Filter by status
@@ -56,6 +63,16 @@ function Container() {
 
     setDataForRender(filteredData);
   }, [data, searchQuery, filterOption, sortrOption]);
+
+  const handleAddCard = (question: string, answer: string, status: string) => {
+    axios.post(import.meta.env.VITE_API_KEY + "/flashcards", { question, answer, status, created: new Date(), updated: new Date() })
+      .then((res: AxiosResponse) => {
+        console.log("Created")
+        console.log(res.data.id)
+        if(page-1 <= res.data.id / 10) setPage((res.data.id / 10)+1)
+        setHasMore(true)
+      })
+  }
 
   return (
     <div className='flashcards-grid'>
@@ -69,7 +86,8 @@ function Container() {
           <select value={sortrOption} onChange={(e) => { setSortrOption(e.currentTarget.value) }}>
             <option>Default</option>
             <option>Question</option>
-            <option>Answer</option>
+            <option>Create Date</option>
+            <option>Update Date</option>
           </select>
         </div>
         <div className="filter-operation">
@@ -81,10 +99,18 @@ function Container() {
             <option>Noted</option>
           </select>
         </div>
-        <div className="action-button">
+        <div className="action-button" onClick={() => setIsModalOpen(true)}>
           <button>Add Card</button>
         </div>
       </div>
+      {
+        isModalOpen &&
+        <AddCardModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          onAddCard={handleAddCard}
+        />
+      }
       {dataForRender.map((c: CardProps, i: number) => {
         if (i + 1 === dataForRender.length) {
           return <div className='lastitem-container' ref={lastItemRef} key={i}><Card deleteCard={() => { handleDeleteCard(c.id) }} card={c} key={i} /></div>
