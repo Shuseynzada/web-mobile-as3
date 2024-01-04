@@ -1,7 +1,6 @@
 import { NavLink, NavLinkRenderProps } from 'react-router-dom';
 
 const Navbar = () => {
-    // Custom function to determine the active class
     const getNavLinkClass = ({ isActive }: NavLinkRenderProps) => (
         isActive
             ? 'px-3 py-2 rounded-md text-sm font-medium text-gray-900 bg-gray-100'
@@ -13,7 +12,6 @@ const Navbar = () => {
             <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
                 <div className="flex justify-between h-16 items-center">
                     <div className="flex space-x-4">
-                        {/* Navigation Links */}
                         <NavLink to="/" className={getNavLinkClass}>
                             Home
                         </NavLink>
@@ -24,7 +22,6 @@ const Navbar = () => {
                             Contact
                         </NavLink>
                     </div>
-                    {/* Additional elements here if needed, like a logo or a toggle button */}
                 </div>
             </div>
         </nav>
